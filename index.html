@@ -21,7 +21,24 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jqueryui/style.css">
+  <script>
+  $(function() {
+    $( "#slider-range-max" ).slider({
+      range: "max",
+      min: 1,
+      max: 10,
+      value: 2,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+      }
+    });
+    $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+  });
+  </script>
 	
 </head>
 
@@ -104,26 +121,11 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
 			
-<script>
-             $(function() {
-            $('#submit').click(function() {
-                var index1 = $('#index1').val();
-                var index2 = $('#index2').val();
-                for (var i = 0; i < countArr.length; i++) {
-                    if (index1 == countArr[i].start && index2 == countArr[i].end) { //if (index1 == $countArr[i].start && index2 == $countArr[i].end{
-                        var answert = countArr[i].count;
-                        $('#answer').val("HK$" + answer);
-                    }
-                }
-            });
-        });
-</script>
-<label for="income">Your median monthly income :</label>
-<input type="range" min="10000" max="20000" step="100" id="income" style="background-color: rgb(255, 255, 255);">
-<div class="form-group">
-<label for="headcount">Is your monthly income above average ?</label>
-<input type="text" id="average" readonly="">
-</div>
+<p>
+  <label for="amount">最小的房间数量：</label>
+  <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<div id="slider-range-max"></div>
 			
 		    
 		    </div>
