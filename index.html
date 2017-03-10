@@ -104,23 +104,42 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
 			
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $("#div1").fadeToggle();
-        $("#div2").fadeToggle("slow");
-        $("#div3").fadeToggle(3000);
-    });
-});
+<h2> Calculator </h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="amount">Amount of books</label>
+                            <input class="form-control" type="text" id="amount" value="3">
+                            <label for="unit">Unit price</label>
+                            <input class="form-control" type="text" id="unit" value="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" id="calculate">Calculate</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="total">Total cost:</label>
+                            <input class="form-control" type="text" id="total">
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(function() { // Routine format; put all your jQuery initialisation inside
+                        $('#calculate').click(function() { // Set the mouse click event hander for element "#calculate"
+                            // Normal Javascript here
+                            // Do whatever you want
+                            var amount = $('#amount').val();
+                            var unit = $('#unit').val();
+                            var total = amount * unit;
+                            $('#total').val(total);
+                        });
+                    }); // Routine format; put all your jQuery initialisation inside
 </script>
-
-<p>Demonstrate fadeTo() with different parameters.</p>
-
-<button>Click to fade boxes</button><br><br>
-
-<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
-<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
-<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
 			
 		    
 		    </div>
