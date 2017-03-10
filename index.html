@@ -21,27 +21,8 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	
-<script>
-  $( function() {
-    $( "#slider" ).slider({
-      value:100,
-      min: 0,
-      max: 500,
-      step: 50,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-  } );
-</script>
-
-
 </head>
 
 <body>
@@ -123,12 +104,27 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
 			
-<p>
-  <label for="amount">Donation amount ($50 increments):</label>
-  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-</p>
- 
-<div id="slider"></div>			
+<script>
+             $(function() {
+            $('#submit').click(function() {
+                var index1 = $('#index1').val();
+                var index2 = $('#index2').val();
+                for (var i = 0; i < countArr.length; i++) {
+                    if (index1 == countArr[i].start && index2 == countArr[i].end) { //if (index1 == $countArr[i].start && index2 == $countArr[i].end{
+                        var answert = countArr[i].count;
+                        $('#answer').val("HK$" + answer);
+                    }
+                }
+            });
+        });
+</script>
+<label for="income">Your median monthly income :</label>
+<input type="range" min="10000" max="20000" step="100" id="income" style="background-color: rgb(255, 255, 255);">
+<div class="form-group">
+<label for="headcount">Is your monthly income above average ?</label>
+<input type="text" id="average" readonly="">
+</div>
+			
 		    
 		    </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
