@@ -21,12 +21,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -108,7 +103,22 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
+			
+			<div class="col-md-6 col-sm-12 col-xs-12">
+                	<br>
+                	<div>
+                            <label for="amount">今年</label>
+                            <input class="form-control" type="text" id="amount" readonly="" value="2017">
+                            <br>
+                            
+                            <label for="unit">回到幾年前</label>
+                            <input class="form-control" type="text" id="unit">
+                            <br>
+                            
+                        <button class="btn btn-primary" id="calculate" >穿越</button>
+                        <br>
+                        <br>
+			
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/ipad.png" alt="">
@@ -130,8 +140,12 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-                </div>
+			
+			<label for="total">到達年份</label>
+                            <input class="form-control" type="text" id="total" readonly="">
+                            <br>
+			
+                  </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="img/dog.png" alt="">
                 </div>
@@ -152,7 +166,146 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+			
+			<p>港島百大物業</p>
+			<br>
+                        <input class="form-control" type="text" id="hk" readonly="">
+                        <br>
+
+                <script>
+                   $(function() { 
+                        $('#calculate').click(function() { 
+                            var amount = $('#amount').val();
+                            var unit = $('#unit').val();
+                            var total = amount - unit;
+                            $('#total').val(total);
+                            
+                            if(total<1978){
+                            var result = "未有資料";
+                            $('#total').val(result);
+                            }
+                        
+                           	if(total==1978){
+                            var hk_yes = "南豐新邨";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                           	if(total==1979){
+                            var hk_yes = "碧瑤灣";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                           	if(total==1981){
+                            var hk_yes = "置富花園";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                          	if(total==1982){
+                            var hk_yes = "香港仔中心";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                        	if(total==1984){
+                            var hk_yes = "和富中心";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1986){
+                            var hk_yes = "城市花園";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1987){
+                            var hk_yes = "太古城，康怡花園";
+                            $('#hk').val(hk_yes);
+                            }
+                            
+                            if(total==1988){
+                            var hk_yes = "比華利山，嘉雲臺";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1989){
+                            var hk_yes = "會展中心－會景閣，鯉景灣，杏花村，陽明山莊";
+                            $('#hk').val(hk_yes);
+                            }
+                            
+                            if(total==1991){
+                            var hk_yes = "帝景園";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1993){
+                            var hk_yes = "光明臺，地利根德閣";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1994){
+                            var hk_yes = "嘉富麗苑，雍景臺";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1995){
+                            var hk_yes = "海怡半島";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==1996){
+                            var hk_yes = "港運城，翰林軒";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==2001){
+                            var hk_yes = "藍灣半島，逸濤灣，寶翠園";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                            if(total==2001){
+                            var hk_yes = "藍灣半島，逸濤灣，寶翠園";
+                            $('#hk').val(hk_yes);
+                            }                    
+                        
+                           if(total==2002){
+                            var hk_yes = "禮頓山";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                           if(total==2003){
+                            var hk_yes = "帝后華庭";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                           if(total==2004){
+                            var hk_yes = "深灣軒，泓都";
+                            $('#hk').val(hk_yes);
+                            }
+                        
+                           if(total==2005){
+                            var hk_yes = "嘉亨灣";
+                            $('#hk').val(hk_yes);
+                            }                
+                        
+                         	if(total==2006){
+                            var hk_yes = "尚翹峰，聚賢居";
+                            $('#hk').val(hk_yes);
+                            }         
+                        
+                            if(total==2008){
+                            var hk_yes = "貝沙灣";
+                            $('#hk').val(hk_yes);
+                            }
+                            
+
+                            if(unit<0){
+                            var result = "未來的事我點知！";
+                            $('#total').val(result);
+                            }else{
+                            $('#total').val();
+                        }
+                        
+                    }); 
+                    }); 
+                </script>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/phones.png" alt="">
